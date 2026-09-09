@@ -1,10 +1,9 @@
 import { Helmet } from 'react-helmet-async'
-import { useState } from 'react'
 import SectionHeader from '../components/SectionHeader.jsx'
-import { CheckCircle2, CalendarDays, FileText, Send } from 'lucide-react'
+import { CheckCircle2, CalendarDays, FileText } from 'lucide-react'
 
 const steps = [
-  { title: 'Submit an inquiry', text: 'Complete the pre-application form below or email the admissions office at admin@universityhighschool.sbs.' },
+  { title: 'Submit an inquiry', text: 'Email the admissions office at admin@universityhighschool.sbs.' },
   { title: 'Visit the campus', text: 'Join an open house at 2611 E Matoian Way Ms Uh 134, Fresno, CA 93740-0001. Tour classrooms, labs and meet faculty.' },
   { title: 'Apply online', text: 'Submit the application form, transcripts from the current school, and two recommendation letters.' },
   { title: 'Family interview', text: 'A 30-minute conversation between the family, the student and a member of the admissions team.' },
@@ -30,7 +29,6 @@ const calendar = [
 ]
 
 export default function Admissions() {
-  const [submitted, setSubmitted] = useState(false)
   return (
     <>
       <Helmet>
@@ -72,8 +70,10 @@ export default function Admissions() {
                 </li>
               ))}
             </ul>
+          </div>
 
-            <h2 className="mt-12 flex items-center gap-2 font-serif text-2xl font-bold text-ink">
+          <div>
+            <h2 className="flex items-center gap-2 font-serif text-2xl font-bold text-ink">
               <CalendarDays size={24} className="text-primary-600" aria-hidden="true" /> Key dates
             </h2>
             <ul className="mt-6 space-y-3">
@@ -84,49 +84,6 @@ export default function Admissions() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className="card h-fit">
-            <h2 className="font-serif text-2xl font-bold text-ink">Pre-application inquiry</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Tell us about your student and our admissions team will respond within two school days.
-              You can also email <a href="mailto:admin@universityhighschool.sbs" className="font-semibold text-primary-700 hover:underline">admin@universityhighschool.sbs</a>.
-            </p>
-            {submitted ? (
-              <p className="mt-6 flex items-center gap-2 rounded-lg bg-green-50 px-4 py-3 text-sm font-semibold text-green-700 ring-1 ring-green-200">
-                <CheckCircle2 size={18} aria-hidden="true" /> Thank you! Your inquiry has been received by the admissions office.
-              </p>
-            ) : (
-              <form className="mt-6 space-y-4" onSubmit={e => { e.preventDefault(); setSubmitted(true) }}>
-                <div>
-                  <label htmlFor="student-name" className="mb-1 block text-sm font-semibold text-ink">Student full name</label>
-                  <input id="student-name" required className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200" />
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="grade" className="mb-1 block text-sm font-semibold text-ink">Grade applying for</label>
-                    <select id="grade" className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200">
-                      <option>Grade 9</option><option>Grade 10</option><option>Grade 11</option><option>Grade 12</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="year" className="mb-1 block text-sm font-semibold text-ink">School year</label>
-                    <select id="year" className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200">
-                      <option>2026–2027</option><option>2027–2028</option>
-                    </select>
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="parent-email" className="mb-1 block text-sm font-semibold text-ink">Parent/guardian email</label>
-                  <input id="parent-email" type="email" required className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="mb-1 block text-sm font-semibold text-ink">Questions or comments</label>
-                  <textarea id="message" rows={4} className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200" />
-                </div>
-                <button type="submit" className="btn-primary w-full justify-center"><Send size={16} aria-hidden="true" /> Submit inquiry</button>
-              </form>
-            )}
           </div>
         </div>
       </section>
