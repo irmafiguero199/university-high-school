@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ShieldCheck } from 'lucide-react'
+import { Phone, Mail, MapPin, ShieldCheck } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -17,11 +17,6 @@ export default function Footer() {
           <p className="mt-3 inline-flex items-center gap-1.5 text-xs text-gold-400">
             <ShieldCheck size={14} aria-hidden="true" /> Accredited Institution · EIN 77-0515663
           </p>
-          <div className="mt-4 flex gap-3">
-            <a href="https://www.facebook.com/universityhighschoolfresno" aria-label="Facebook" className="rounded-full bg-slate-800 p-2 hover:bg-primary-600"><Facebook size={16} /></a>
-            <a href="https://www.instagram.com/universityhighschoolfresno" aria-label="Instagram" className="rounded-full bg-slate-800 p-2 hover:bg-primary-600"><Instagram size={16} /></a>
-            <a href="https://www.linkedin.com/school/university-high-school-fresno" aria-label="LinkedIn" className="rounded-full bg-slate-800 p-2 hover:bg-primary-600"><Linkedin size={16} /></a>
-          </div>
         </div>
 
         <div>
