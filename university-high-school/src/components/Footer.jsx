@@ -7,7 +7,11 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="University High School logo" className="h-10 w-10" />
+            <img 
+              src="https://i.ibb.co/yLy5z4x/logo.jpg" 
+              alt="University High School logo" 
+              className="h-10 w-10 rounded object-contain" 
+            />
             <span className="font-serif text-lg font-bold text-white">University High School</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed">
