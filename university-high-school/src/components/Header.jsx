@@ -46,7 +46,11 @@ export default function Header() {
       <div className="bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center gap-3">
-            <img src="https://i.ibb.co/yLy5z4x/logo.jpg" alt="University High School logo" className="h-10 w-10 rounded object-contain" />
+            <img 
+              src="https://i.ibb.co/yLy5z4x/logo.jpg" 
+              alt="University High School logo" 
+              className="h-12 w-auto max-w-[160px] object-contain rounded" 
+            />
             <span className="leading-tight">
               <span className="block font-serif text-lg font-bold text-ink">University High School</span>
               <span className="block text-xs font-medium text-primary-600">College Preparatory · Fresno, CA</span>
