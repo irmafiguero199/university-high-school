@@ -1,0 +1,10 @@
+{
+  "name": "University High School",
+  "short_name": "UHS Fresno",
+  "description": "Accredited college-preparatory high school in Fresno, CA. EIN 77-0515663.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e288a",
+  "theme_color": "#2544eb",
+  "icons": [{ "src": "/logo.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
